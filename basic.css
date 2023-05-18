@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "overskrift-skrifttype"; /* Navnet på overskriftsskrifttypen */
+  font-family: "overskrift-skrifttype";
   src: url("fonts/miller/miller.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "brødtekst-skrifttype"; /* Navnet på brødtekstskrifttypen */
+  font-family: "brødtekst-skrifttype";
   src: url("fonts/brandon/brandonnormal.otf") format("opentype");
 }
 
@@ -13,18 +13,17 @@ body, html {
   grid-template-rows: auto auto 1fr auto;
   grid-template-columns: 1fr;
   min-height: 100vh;
-  font-family: "overskrift-skrifttype", sans-serif; /* Anvend overskriftsskrifttypen på hele body */
+  font-family: "overskrift-skrifttype", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: "overskrift-skrifttype", sans-serif; /* Anvend overskriftsskrifttypen til overskrifter */
+  font-family: "overskrift-skrifttype", sans-serif;
 }
 
 p, span, a {
-  font-family: "brødtekst-skrifttype", sans-serif; /* Anvend brødtekstskrifttypen til brødtekst */
+  font-family: "brødtekst-skrifttype", sans-serif;
 }
 
 h3 {
@@ -42,7 +41,7 @@ nav {
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatisk tilpasning af kolonner */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 0px;
 }
 
@@ -54,6 +53,10 @@ footer {
   background-color: #A2BDBD;
   padding-top: 10px;
   padding-bottom: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .footer-menu {
@@ -71,14 +74,14 @@ footer {
   background-color: #A2BDBD;
   height: 100%;
   text-decoration: none;
-  flex: 1; /* Tilføj flex: 1 for at lade ikonerne fylde tilgængelig plads */
+  flex: 1;
 }
 
 .footer-menu img {
   width: 100%;
   height: auto;
-  max-width: 30px; /* Juster størrelsen efter behov */
-  max-height: 30px; /* Juster størrelsen efter behov */
+  max-width: 30px;
+  max-height: 30px;
   object-fit: contain;
 }
 
@@ -94,7 +97,6 @@ footer {
     flex-basis: 20%;
   }
 }
-
 
 @media (min-width: 769px) and (max-width: 1024px) {
   /* Stilarter til iPad */

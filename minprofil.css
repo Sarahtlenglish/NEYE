@@ -1,3 +1,12 @@
+body, html {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   text-align: center;
 }
@@ -15,111 +24,199 @@ h1 {
 
 section {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Ændret til flex-start */
+  height: 100vh; /* Tilføjet denne linje for at sikre, at sektionen fylder hele viewport'en */
 }
 
 
 header {
   position: relative;
   text-align: center;
-  background-color: transparent; /* Gør baggrundsfarven gennemsigtig */
-  z-index: 2; /* Sæt z-index for at bringe header foran billedet */
+  background-color: transparent;
+  z-index: 2;
 }
 
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.section-with-text {
+  position: relative;
+}
+
+
 .background-image {
-   position: absolute;
-   top: 80px;
-   left: 50%;
-   transform: translateX(-50%);
-   width: 100%;
-   text-align: center;
- }
+  display: flex;
+  justify-content: center;
+}
 
- .background-image img {
-   max-width: 100%;
-   height: auto;
- }
+.background-image img {
+  max-width: 100%;
+  height: auto;
+  align-self: flex-start;
+}
 
+
+.text-container {
+  margin: 0 auto;
+}
+
+.member-text {
+  margin-top: 0;
+}
+
+.progress-text {
+  position: absolute;
+  top: 110px;
+  left: 5px;
+  font-size: 16px;
+}
 
 @media (max-width: 768px) {
   .progress-text {
-    font-size: 14px;
     position: absolute;
-    top: 70%;
-    left: 15%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-      }
-
-    #medlemstekst {
-      margin-top:10px;
-    }
-
-     }
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .background-image {
-    width: 100%;
-    grid-column: 1 / -1;
+    top: 110px;
+    left: 5px;
+    font-size: 12px;
+    text-align: left;
+    transform: none;
   }
-  section {
-    background-color: transparent; /* Gør baggrundsfarven gennemsigtig */
-  }
-
-  .progress-text {
-    font-size: 20px;
+  .text-container {
     position: absolute;
-    top: 90%;
+    font-size: 12px;
+    top: 5%; /* Placer elementet lige efter procesbaren */
+    left: 10px;
+    right: 0;
+    margin-top: 40px; /* Juster denne værdi efter behov for at opnå ønsket afstand */
+    padding: 10px 10px; /* Tilføj eventuelt en vandret polstring efter behov */
+    max-width: 800px;
+  }
+  .image-container {
+    position: absolute;
+    top: calc(10% + 50px);
     left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-     }
+    transform: translateX(-50%);
+    max-width: 800px;
+  }
 
-     main {
-       align-items: center;
-     }
+  .image-container img {
 
-     .footer-menu {
-       justify-content: center;
+    width: 250px;
+    height: auto;
+    align-items: center;
+  }
+  .qr-container-text {
+    position: absolute;
+    top: calc(47% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #F6F6F6;
+    width: 100%;
+    font-size: 12px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
 
-     }
-
-     #medlemstekst {
-       margin-top:10px;
-     }
 }
 
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .progress-text {
+    font-size: 18px;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+  }
+  .text-container {
+    position: absolute;
+    font-size: 22px;
+    top: 10%; /* Placer elementet lige efter procesbaren */
+    left: 1px;
+    right: 0;
+    margin-top: 60px; /* Juster denne værdi efter behov for at opnå ønsket afstand */
+    padding: 5px 10px; /* Tilføj eventuelt en vandret polstring efter behov */
+    width: 800px;
+  }
+  body {
+    background-color: blue;
+  }
+  .image-container {
+    position: absolute;
+    top: calc(20% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 800px;
+  }
+
+  .image-container img {
+
+    width: 400px;
+    height: auto;
+    align-items: center;
+  }
+
+  .qr-container-text {
+    position: absolute;
+    top: calc(56% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #F6F6F6;
+    width: 100%;
+    font-size: 22px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+}
+
 @media (min-width: 1025px) {
-  /* Stilarter til desktop */
-  main {
-    justify-content: center;
-    width: 80%; /* Juster bredden efter behov */
-    margin: 0 auto; /* Centreret vandret */
+  .progress-text {
+    font-size: 25px;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+  }
+  .text-container {
+    position: absolute;
+    font-size: 28px;
+    top: 18%; /* Placer elementet lige efter procesbaren */
+    left: 1px;
+    right: 0;
+    margin-top: 100px; /* Juster denne værdi efter behov for at opnå ønsket afstand */
+    padding: 10px 10px; /* Tilføj eventuelt en vandret polstring efter behov */
+    max-width: 1500px;
   }
 
-  .footer-menu {
-    margin-left: 30px;
-    margin-right: 30px;
+  .image-container {
+    position: absolute;
+    top: calc(40% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 800px;
   }
 
-    .background-image {
-      display: flex;
-      justify-content: center;
-      margin: 0px;
-    }
+  .image-container img {
 
-    .background-image img {
-      width: 60%;
-      max-width: 80%; /* Juster størrelsen efter behov */
-      height: 40%;
-    }
-
-    .progress-text {
-      font-size: 20px;
-      text-align: center;
-      top: 85%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      padding: 10px;
-       }
+    width: 500px;
+    height: auto;
+    align-items: center;
   }
+
+  .qr-container-text {
+    position: absolute;
+    top: calc(100% + 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #F6F6F6;
+    width: 100%;
+    font-size: 22px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+}
