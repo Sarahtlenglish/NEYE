@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "overskrift-skrifttype"; /* Navnet på overskriftsskrifttypen */
+  src: url("fonts/miller/miller.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "brødtekst-skrifttype"; /* Navnet på brødtekstskrifttypen */
+  src: url("fonts/brandon/brandonnormal.otf") format("opentype");
+}
+
+body, html {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  font-family: "overskrift-skrifttype", sans-serif; /* Anvend overskriftsskrifttypen på hele body */
+  margin: 0;
+  padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "overskrift-skrifttype", sans-serif; /* Anvend overskriftsskrifttypen til overskrifter */
+}
+
+p, span, a {
+  font-family: "brødtekst-skrifttype", sans-serif; /* Anvend brødtekstskrifttypen til brødtekst */
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+header {
+  padding: 20px;
+}
+
+nav {
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatisk tilpasning af kolonner */
+  grid-gap: 0px;
+}
+
+section {
+  background-color: transparent;
+}
+
+footer {
+  background-color: #A2BDBD;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.footer-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: #A2BDBD;
+  height: 100%;
+  text-decoration: none;
+  flex: 1; /* Tilføj flex: 1 for at lade ikonerne fylde tilgængelig plads */
+}
+
+.footer-menu img {
+  width: 100%;
+  height: auto;
+  max-width: 30px; /* Juster størrelsen efter behov */
+  max-height: 30px; /* Juster størrelsen efter behov */
+  object-fit: contain;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+  /* Stilarter til mobil */
+  .footer-menu {
+    flex-wrap: wrap;
+  }
+
+  .footer-menu a {
+    flex-basis: 20%;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Stilarter til iPad */
+  .footer-menu {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Stilarter til desktop */
+  .footer-menu {
+    justify-content: space-between;
+  }
+}

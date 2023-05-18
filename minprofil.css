@@ -1,0 +1,125 @@
+h1 {
+  text-align: center;
+}
+
+.settings-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.settings-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+section {
+  background-color: white;
+}
+
+
+header {
+  position: relative;
+  text-align: center;
+  background-color: transparent; /* Gør baggrundsfarven gennemsigtig */
+  z-index: 2; /* Sæt z-index for at bringe header foran billedet */
+}
+
+.background-image {
+   position: absolute;
+   top: 80px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100%;
+   text-align: center;
+ }
+
+ .background-image img {
+   max-width: 100%;
+   height: auto;
+ }
+
+
+@media (max-width: 768px) {
+  .progress-text {
+    font-size: 14px;
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+      }
+
+    #medlemstekst {
+      margin-top:10px;
+    }
+
+     }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .background-image {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+  section {
+    background-color: transparent; /* Gør baggrundsfarven gennemsigtig */
+  }
+
+  .progress-text {
+    font-size: 20px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+     }
+
+     main {
+       align-items: center;
+     }
+
+     .footer-menu {
+       justify-content: center;
+
+     }
+
+     #medlemstekst {
+       margin-top:10px;
+     }
+}
+
+
+@media (min-width: 1025px) {
+  /* Stilarter til desktop */
+  main {
+    justify-content: center;
+    width: 80%; /* Juster bredden efter behov */
+    margin: 0 auto; /* Centreret vandret */
+  }
+
+  .footer-menu {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+    .background-image {
+      display: flex;
+      justify-content: center;
+      margin: 0px;
+    }
+
+    .background-image img {
+      width: 60%;
+      max-width: 80%; /* Juster størrelsen efter behov */
+      height: 40%;
+    }
+
+    .progress-text {
+      font-size: 20px;
+      text-align: center;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px;
+       }
+  }

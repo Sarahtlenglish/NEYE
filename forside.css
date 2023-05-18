@@ -1,0 +1,88 @@
+#slideshow {
+  background-color: #A2BDBD;
+  box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#nyhed {
+  background-color: #C0BFBF;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+  padding-bottom: 30px; /* Tilføj passende padding til toppen og bunden */
+}
+
+#brand {
+  background-color: #FFFFFF;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
+  padding: 0 25px; /* Tilføj 10px padding på venstre og højre side */
+  width: 100%; /* Sørg for, at #brand-sektionen fylder 100% bredde */
+  box-sizing: border-box; /* Inkluder padding i den samlede bredde */
+}
+
+#brand h3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h3 {
+  position: relative;
+  padding-right: 20px;
+  margin-left:25px;
+}
+
+[data-text]::after {
+  content: attr(data-text);
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "brødtekst-skrifttype", sans-serif;
+}
+
+h3.title:not([data-text])::after {
+  content: "";
+}
+
+h3.title {
+  font-size: 15px;
+}
+
+
+
+
+
+
+.title {
+  margin-right: 25px;
+  position: relative;
+}
+
+.data-text {
+  font-size: 8px;
+  font-family: "brødtekst-skrifttype", sans-serif;
+  position: absolute;
+  right: 0;
+}
+
+
+#brand img {
+  max-width: 100%;
+  height: auto;
+}
+
+#nyhed img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #nyhed img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #brand img {
+    margin-left: 10;
+    margin-right: 10;
+  }
+
+}
