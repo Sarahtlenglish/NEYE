@@ -1,5 +1,5 @@
 #slideshow {
-  background-color: #A2BDBD;
+  background-color: #D5DEDF;
   box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -43,16 +43,16 @@ h3.title:not([data-text])::after {
 
 h3.title {
   font-size: 15px;
+  margin-bottom: 10px;
 }
-
-
-
 
 
 
 .title {
   margin-right: 25px;
   position: relative;
+  margin-bottom: 0;
+  margin-top: 15px;
 }
 
 .data-text {
@@ -66,6 +66,7 @@ h3.title {
 #brand img {
   max-width: 100%;
   height: auto;
+  margin-bottom: 130px;
 }
 
 #nyhed img {
@@ -74,7 +75,78 @@ h3.title {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+.slideshow-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 80vw;
+  overflow:hidden;
+}
+
+.slides img {
+  width: 80vw;
+  height: 80vw;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.slide-indicator {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.slide-indicator.active {
+  background-color: #A2BDBD;
+}
+
+.favoritter-container {
+  overflow-x: scroll;
+}
+
+.favoritter-wrapper {
+  display: flex;
+}
+
+.favorit-item {
+  margin: 10px 0 10px 15px; /* Tilføj ønsket mellemrum mellem varerne */
+
+}
+
+.favorit-item img {
+  width: 160px; /* Juster bredden efter dine behov */
+
+}
+
+
+@media (max-width: 600px) {
   #nyhed img {
     margin-left: 0;
     margin-right: 0;
@@ -84,5 +156,21 @@ h3.title {
     margin-left: 10;
     margin-right: 10;
   }
+
+}
+
+@media (min-width: 601px) {
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 40vw;
+  overflow:hidden;
+}
+
+.slides img {
+  width: 40vw;
+  height: 40vw;
+}
 
 }

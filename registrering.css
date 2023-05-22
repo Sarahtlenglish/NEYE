@@ -1,0 +1,296 @@
+@font-face {
+  font-family: "overskrift-skrifttype";
+  src: url("fonts/miller/miller.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "brødtekst-skrifttype";
+  src: url("fonts/brandon/brandonnormal.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "brødtekstfed-skrifttype";
+  src: url("fonts/brandon/brandonmellem.otf") format("opentype");
+}
+
+body,
+html {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 1fr;
+  font-family: "overskrift-skrifttype", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: url(billeder/baggrund.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "overskrift-skrifttype", sans-serif;
+}
+
+p, span, a, input, label, select {
+  font-family: "brødtekst-skrifttype", sans-serif;
+}
+
+button, b {
+  font-family: "brødtekstfed-skrifttype", sans-serif;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
+p {
+  color: white;
+}
+
+.logo {
+  height: 15vw;
+  width: auto;
+  left: 50%;
+}
+
+
+.sektion1 {
+  margin-top: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sektion2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vw;
+}
+
+label {
+  text-align: left;
+  font-size: 4vw;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.form-text {
+  margin-bottom: 5px;
+  align-self: flex-start;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 65vw;
+  height: 10vw;
+  background-color: white;
+  border: none;
+  font-size: 4vw;
+  justify-content: flex-start;
+  text-align: left;
+  color: #C0BFBF;
+  margin-bottom: 15px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 37%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  font-family: "Material Symbols Outlined";
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  color: #C0BFBF;
+}
+
+.toggle-password::before {
+  content: "\E8F5";
+}
+
+.toggle-password.active::before {
+  content: "\E8F4";
+}
+
+.toggle-button {
+  display: flex;
+  width: 10vw;
+  height: 5vw;
+  background-color: #99A1A7;
+  border-radius: 5vw;
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  top: 100%;
+  align-items: center;
+}
+
+.toggle-button .toggle-slider {
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  background-color: #FFFFFF;
+  border-radius: 5vw;
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-button.on .toggle-slider {
+  transform: translateX(5vw);
+}
+
+.toggle-button.on {
+  background-color: #9B82AA;
+}
+
+.husk-tekst {
+  margin-left: 12vw;
+  white-space: nowrap;
+  color: white;
+  font-size: 3vw;
+}
+
+.glemt-kodeord {
+  color: white;
+  text-decoration: underline;
+  margin-left: 70%;
+  margin-top: 0;
+  font-size: 3vw;
+  width: 150px;
+}
+
+.tilmeldknap {
+  width: 100%;
+  height: 10vw;
+  border: none;
+  background-color: #9B82AA;
+  color: white;
+  margin-top: 5vw;
+  font-size: 4.5vw;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.eller {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 4vw;
+  margin-top: 6vw;
+}
+
+.eller::before,
+.eller::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: white;
+  margin: 0 10px;
+  width: 19vw;
+}
+
+.eller::before {
+  margin-left: 0;
+}
+
+.eller::after {
+  margin-right: 0;
+}
+
+.ikoner img {
+  height: 20vw;
+  width: auto;
+  display: inline-flex;
+  justify-content: space-between;
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+}
+
+p b {
+  color: #835582;
+}
+
+.hardu {
+  font-size: 5vw;
+  text-align: center;
+  display: inline-block;
+  margin-top: 13vh;
+  color: black;
+}
+
+
+.form-input select {
+  width: 20vw; /* Juster bredden efter behov */
+  padding-left: 2vw;
+  height: 10vw;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* Tilføj disse regler, hvis du vil style dropdown-pilen */
+.form-input select::-ms-expand {
+  display: none;
+}
+
+.form-input select::after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+
+.birthday {
+  margin-right: 7px;
+  border: none;
+  font-size: 3.4vw;
+
+}
+
+.accept-betingelser {
+  width: 60vw;
+  margin-top: 10px;
+}
+
+/* ...din eksisterende CSS... */
+
+.accept-betingelser input[type="checkbox"] {
+  display: none;
+}
+
+.accept-betingelser label:before {
+  content: "";
+  display: inline-block;
+  width: 4.2vw;
+  height: 4.2vw;
+  border: none;
+  margin-right: 10px;
+  background-color: #FFFFFF;
+}
+
+.accept-betingelser input[type="checkbox"]:checked + label:before {
+  /* Stil, når checkboxen er markeret */
+  background-color: #9B82AA;
+  border-color: #9B82AA;
+}

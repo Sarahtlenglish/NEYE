@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registrering</title>
+    <link rel="stylesheet" type="text/css" href="registrering.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="registrering.js"></script>
+  </head>
+
+  <body>
+    <header>
+    </header>
+    <nav></nav>
+    <main>
+      <section class="sektion1">
+        <img class="logo" src="billeder/logo.png" alt="Logo">
+      </section>
+
+      <section class="sektion2">
+        <div class="form-wrapper">
+          <label class="form-text" for="Fornavn">Fornavn</label>
+          <input type="text" id="email" name="Fornavn" placeholder="Indtast dit fornavn">
+
+          <label class="form-text" for="Efternavn">Efternavn</label>
+          <input type="text" id="email" name="Efternavn" placeholder="Indtast dit Efternavn">
+
+          <label class="form-text" for="email">Postnummer</label>
+          <input type="text" id="email" name="Postnummer" placeholder="Indtast dit postnummer">
+
+          <label class="form-text" for="email">Mobil</label>
+          <input type="text" id="email" name="mobil" placeholder="Indtast dit mobilnummer">
+
+          <label class="form-text" for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Indtast din email">
+
+          <div class="form-input">
+            <label class="form-text" for="birthday">Fødselsdag</label>
+            <div class="dropdown">
+              <select class="birthday" name="birthday">
+                <option value="">DD</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+
+              <select class="birthday" name="birthday">
+                <option value="">MM</option>
+                <option value="Januar">Januar</option>
+                <option value="Feburar">Feburar</option>
+                <option value="Marts">Marts</option>
+                <option value="April">April</option>
+                <option value="Maj">Maj</option>
+                <option value="Juni">Juni</option>
+                <option value="Juli">Juli</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="Oktober">Oktober</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>
+
+              <select class="birthday" name="birthday">
+                <option value="">YYYY</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+
+              </select>
+              </div>
+            </div>
+
+          <label class="form-text" for="password">Adgangskode</label>
+          <div class="password-input-wrapper">
+            <input type="password" id="password" name="password" placeholder="Indtast din adgangskode">
+            <div class="toggle-password"></div>
+          </div>
+
+          <label class="form-text" for="confirm-password">Gentag adgangskode</label>
+          <div class="password-input-wrapper">
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Gentag din adgangskode">
+            <div class="toggle-password"></div>
+          </div>
+
+          <div class="accept-betingelser">
+            <input type="checkbox" id="betingelser" name="betingelser">
+            <label class="form-text" for="betingelser">Ja tak, jeg accepterer hermed medlemsbetingelserne for Klub NEYE.
+                                                      <u>Læs betingelser</u></label>
+          </div>
+
+
+          <button class="tilmeldknap" type="button" name="tilmeld">Tilmeld</button>
+          <p class="eller">Eller opret med</p>
+          <div class="ikoner">
+            <img src="billeder/google.png" alt="">
+            <img src="billeder/apple.png" alt="">
+            <img src="billeder/facebook.png" alt="">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+    </footer>
+  </body>
+</html>
