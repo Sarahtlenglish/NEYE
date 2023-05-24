@@ -1,26 +1,62 @@
 #slideshow {
   background-color: #D5DEDF;
-  box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.2);
+  box-shadow:   inset 0px 11px 8px -14px black,
+                inset 0px -11px 8px -14px black;
 }
 
 #nyhed {
   background-color: #C0BFBF;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+  box-shadow:   inset 0px 11px 8px -14px black,
+                inset 0px -11px 8px -14px black;
   padding-bottom: 30px; /* Tilføj passende padding til toppen og bunden */
 }
 
+
 #brand {
   background-color: #FFFFFF;
-  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
   padding: 0 25px; /* Tilføj 10px padding på venstre og højre side */
   width: 100%; /* Sørg for, at #brand-sektionen fylder 100% bredde */
   box-sizing: border-box; /* Inkluder padding i den samlede bredde */
 }
 
+
 #brand h3 {
   margin-left: 0;
   margin-right: 0;
 }
+
+#neyefond {
+  background-color: #835582;
+  box-shadow:   inset 0px 11px 8px -14px black,
+                inset 0px -11px 8px -14px black;
+  padding-bottom: 10px;
+  padding-top: 40px;
+  position: relative;
+}
+
+#overskud {
+  background-color: white;
+  margin-top: 20px;
+  height: 150px;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay-button {
+  position: absolute;
+  bottom: 40px;
+  left: 12vw;
+  padding: 5px 10px 5px 10px;
+  background-color: #000000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2vw;
+}
+
 
 h3 {
   position: relative;
@@ -66,7 +102,7 @@ h3.title {
 #brand img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 130px;
+  margin-bottom: 30px;
 }
 
 #nyhed img {
@@ -75,11 +111,19 @@ h3.title {
   margin: 0;
 }
 
+#neyefond img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
 .slideshow-container {
   position: relative;
   width: 80%;
   margin: 0 auto;
   padding: 10px;
+  margin-bottom: 10px;
 }
 
 .slides {
@@ -133,6 +177,7 @@ h3.title {
 
 .favoritter-wrapper {
   display: flex;
+  margin-bottom: 10px;
 }
 
 .favorit-item {
