@@ -25,28 +25,65 @@
   }
 
 
-  // Input valideringsform og login
-  function validateForm() {
-    var emailInput = document.getElementById("email").value;
-    var passwordInput = document.getElementById("password").value;
+  document.addEventListener("DOMContentLoaded", function() {
+  document.querySelector(".loginknap").addEventListener("click", validateForm);
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      validateForm();
+    }
+  });
 
-    if (emailInput === "" || passwordInput === "") {
-      alert("Udfyld venligst begge felter");
+  function validateForm() {
+    const user = {
+      email: document.getElementById("email").value,
+      password: document.getElementById("password").value
+    };
+
+    const errorText = document.getElementById("errorText");
+
+    if (user.email === "" || user.password === "") {
+      errorText.textContent = "Udfyld venligst begge felter";
       return false;
     } else {
       // Tjek om email og password matcher det ønskede login
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
-      if (emailInput === "stle48708@edu.ucl.dk" && passwordInput === "Ucl123") {
+      const validLogins = [
+        { email: "stle48708@edu.ucl.dk", password: "Ucl123" },
+        { email: "edzu50541@edu.ucl.dk", password: "Ucl123" },
+        { email: "nrjo50210@edu.ucl.dk", password: "Ucl123" },
+        { email: "rabe50477@edu.ucl.dk", password: "Ucl123" }
+      ];
+
+      let validEmail = false;
+      let validPassword = false;
+
+      for (let i = 0; i < validLogins.length; i++) {
+        if (user.email === validLogins[i].email) {
+          validEmail = true;
+          if (user.password === validLogins[i].password) {
+            validPassword = true;
+            break;
+          }
+        }
+      }
+
+      if (validEmail && validPassword) {
         // Validering er succesfuld
-        
         window.location.href = "forside.html"; // Omdirigér til forsiden
         return true;
       } else {
         // Forkert loginoplysninger
-        alert("Forkert email eller adgangskode. Prøv igen.");
+        if (!validEmail && !validPassword) {
+          errorText.textContent = "Forkert e-mail og adgangskode. Prøv igen.";
+        } else if (!validEmail) {
+          errorText.textContent = "Forkert e-mail. Prøv igen.";
+        } else {
+          errorText.textContent = "Forkert adgangskode. Prøv igen.";
+        }
         return false;
       }
     }
   }
+});
