@@ -1,23 +1,24 @@
 /* skjul/vis kodeord funktion */
-  function togglePasswordVisibility() {
-    var passwordInput = document.getElementById("password");
-    var toggleButton = document.querySelector(".toggle-password");
+function togglePasswordVisibility() {
+  const passwordInput = document.getElementById("password");
+  const toggleButton = document.querySelector(".toggle-password");
 
-    if (passwordInput.type === "password") {
-      passwordInput.type = "text";
-      toggleButton.classList.add("active");
-    } else {
-      passwordInput.type = "password";
-      toggleButton.classList.remove("active");
-    }
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    toggleButton.classList.add("active");
+  } else {
+    passwordInput.type = "password";
+    toggleButton.classList.remove("active");
   }
+}
 
-  const togglePassword = document.querySelector(".toggle-password");
-  const passwordInput = document.querySelector("#password");
+const togglePassword = document.querySelector(".toggle-password");
+const passwordInput = document.querySelector("#password");
 
-  togglePassword.addEventListener("click", function () {
-    togglePasswordVisibility();
-  });
+togglePassword.addEventListener("click", function () {
+  togglePasswordVisibility();
+});
+
 
   /* husk mig knap funktion */
   function toggleButton(button) {
